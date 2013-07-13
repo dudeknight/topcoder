@@ -1,6 +1,3 @@
-// BEGIN CUT HERE
-
-// END CUT HERE
 // #line 5 "TreeUnion.cpp"
 // written by lonerdude(dvdreddy)
 // all rights reserved
@@ -131,3 +128,6 @@ class TreeUnion {
 		
 	}
 };
+
+
+// Powered by FileEdit

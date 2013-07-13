@@ -1,6 +1,6 @@
 // BEGIN CUT HERE
 // END CUT HERE
-#line 4 "Stamp.cpp"
+#line 4 "Ear.cpp"
 // written by lonerdude(dvdreddy)
 // all rights reserved
 //the template by dvdreddy
@@ -32,9 +32,9 @@ using namespace std;
 
 typedef long long ll;
 
-class Stamp {
+class Ear {
 	public:
-	int getMinimumCost(string desiredColor, int stampCost, int pushCost) {
+	long long getCount(vector <string> redX, vector <string> blueX, vector <string> blueY) {
 		
 	}
 };

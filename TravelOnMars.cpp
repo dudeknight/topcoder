@@ -1,6 +1,6 @@
 // BEGIN CUT HERE
 // END CUT HERE
-#line 4 "Stamp.cpp"
+#line 4 "TravelOnMars.cpp"
 // written by lonerdude(dvdreddy)
 // all rights reserved
 //the template by dvdreddy
@@ -32,9 +32,39 @@ using namespace std;
 
 typedef long long ll;
 
-class Stamp {
-	public:
-	int getMinimumCost(string desiredColor, int stampCost, int pushCost) {
-		
+int MAX = 2500;
+
+class TravelOnMars {
+public:
+  int minTimes(vector <int> range, int startCity, int endCity) {
+    int n = range.size();
+    int dp[n][n];
+    fr (i, n){
+      fr (j, n){
+	dp[i][j] = MAX;
+      }
+    }
+
+    fr (i, n){
+      fr (j, range[i]){
+	dp[i][(i + j + 1) % n] = 1;
+      }
+      fr (j, range[i]){
+	dp[i][(i - j - 1 + n) % n] = 1;
+      }      
+    }
+
+    fr (k, n){
+      fr (i, n){
+	fr (j, n){
+	  if (dp[i][k] + dp[k][j] < dp[i][j]){
+	    dp[i][j] = dp[i][k] + dp[k][j];
+	  }
 	}
+      }
+    }
+
+    return dp[startCity][endCity];
+
+  }
 };
